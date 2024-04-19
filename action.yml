@@ -1,11 +1,13 @@
 name: "Setup Gradle"
 description: Setup Java and Gradle environment
 inputs:
-  java-version:  
+  java-version:
     required: false
-    default: 21
+    description: https://github.com/actions/setup-java?tab=readme-ov-file#supported-version-syntax
+    default: '21'
   java-distro:
     required: false
+    description: https://github.com/actions/setup-java?tab=readme-ov-file#supported-distributions
     default: 'liberica'
 runs:
   using: "composite"
@@ -18,5 +20,6 @@ runs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@main
     - name: Prepare ./gradlew
-      uses: gradle build
-    
+      shell: bash
+      run: gradle build
+
