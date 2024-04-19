@@ -1,4 +1,6 @@
 name: "Setup Gradle"
+icon: package
+color: red
 description: Setup Java and Gradle environment
 inputs:
   java-version:
