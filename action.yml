@@ -19,7 +19,8 @@ runs:
         distribution: ${{ inputs.java-distro }}
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@main
-    - name: Prepare ./gradlew
-      shell: bash
+    - shell: bash
+      run: gradle init
+    - shell: bash
       run: gradle build
 
