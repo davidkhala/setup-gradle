@@ -1,0 +1,8 @@
+name: self test
+on: push
+jobs:
+  run:
+    
+    runs-on: ubuntu-latest
+    steps:
+    - uses: davidkhala/setup-gradle@main
